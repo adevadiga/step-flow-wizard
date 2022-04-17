@@ -66,7 +66,7 @@ const screens = [
           <button onClick={onPreviousClick}>Previous </button>
           <button onClick={() => onNextClick({ data: {
             name: 'X',
-            age: 30
+            age: 18
           }})}>Next </button>
         </>
       ):
@@ -74,6 +74,23 @@ const screens = [
   },
   {
     identifier: 'step4',
+    component:  component: (props) => {
+      const { onPreviousClick, onNextClick } = props;
+      return (
+        <>
+          // render something
+          <button onClick={onPreviousClick}>Previous </button>
+          <button onClick={onNextClick}>Next </button>
+        </>
+      ):
+    },
+    shouldRender: ({ age }) => {
+      // Do not show this screen for minors.
+      return age > 18;
+    }
+  },
+  {
+    identifier: 'step5',
     component: component:  component: (props) => {
       const { onPreviousClick } = props;
       return (
@@ -87,7 +104,7 @@ const screens = [
 ];
 
 
-<StepFlowWizard screens={screens}/>
+<StepFlowWizard screens={screens} region="CA"/>
 
 ```
 
