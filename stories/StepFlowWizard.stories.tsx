@@ -133,7 +133,7 @@ const Step5 = ({onPreviousClick, onGoToScreen}) => {
 
 export const Primary: ComponentStory<typeof StepFlowWizard> = () => {
 
-  const steps = [
+  const screens = [
     {
       identifier: 'step1',
       component: Step1
@@ -158,7 +158,7 @@ export const Primary: ComponentStory<typeof StepFlowWizard> = () => {
 
   return (
       <StepFlowWizard
-        screenConfig={steps}
+        screens={screens}
       />  
   );
 };

@@ -22,8 +22,28 @@ import StepFlowWizard from "step-flow-wizard";
 Pass a config array containing components.
 
 ```jsx
+const screens = [
+  {
+    identifier: 'step1',
+    component: Component1,
+  },
+  {
+    identifier: 'step2',
+    component: Component2,
+    shouldRender: ({ region }) => {
+      // Show this step only for US region
+      return region !== 'US';
+    }
+  },
+  {
+    identifier: 'step3',
+    component: Component3,
+  },
+];
+
 <StepFlowWizard 
-  screenConfig={step}/>
+  screens={screens}/>
+
 ```
 
 ### Props

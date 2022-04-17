@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { StepFlowWizardScreenRendererType } from './types';
+import { WizardScreenRendererProps } from './types';
 
-const StepFlowWizardScreenRenderer: FunctionComponent<StepFlowWizardScreenRendererType> = (props) => {
+const WizardScreenRenderer: FunctionComponent<WizardScreenRendererProps> = (props) => {
   const { 
     screen: {
       identifier,
@@ -16,4 +16,4 @@ const StepFlowWizardScreenRenderer: FunctionComponent<StepFlowWizardScreenRender
   </div>
 }
 
-export default StepFlowWizardScreenRenderer;
+export default WizardScreenRenderer;

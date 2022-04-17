@@ -1,15 +1,15 @@
-import { StepWizardState, ReducerActionType, ScreenConfig } from './types';
+import { WizardState, ReducerActionType, WizardScreen } from './types';
 import ActionType from './utils';
 
 const INVALID_SCREEN_INDEX = -1;
 
-const isIndexOutOfBound = (screens: ScreenConfig[], index: number) => index < 0 || index >= screens.length;
+const isIndexOutOfBound = (screens: WizardScreen[], index: number) => index < 0 || index >= screens.length;
 
-const updateShouldRenderCache = (screen: ScreenConfig, shouldRender: boolean) => {
+const updateShouldRenderCache = (screen: WizardScreen, shouldRender: boolean) => {
   return {...screen, shouldRenderCachedValue: shouldRender};
 };
 
-const shouldRenderScreen = (screen: ScreenConfig, aggregatedProps?: object) => {
+const shouldRenderScreen = (screen: WizardScreen, aggregatedProps?: object) => {
   const { shouldRender, shouldRenderCachedValue } = screen;
   if (shouldRenderCachedValue) {
     return shouldRenderCachedValue;
@@ -22,7 +22,7 @@ const shouldRenderScreen = (screen: ScreenConfig, aggregatedProps?: object) => {
 };
 
 
-const getIndexOfComponent = (componentName: string, screens: ScreenConfig[], aggregatedProps?: object) => {
+const getIndexOfComponent = (componentName: string, screens: WizardScreen[], aggregatedProps?: object) => {
   const index = screens.findIndex(screen => screen.identifier === componentName);
   if (index != -1) {
     if (shouldRenderScreen(screens[index], aggregatedProps)) {
@@ -33,7 +33,7 @@ const getIndexOfComponent = (componentName: string, screens: ScreenConfig[], agg
   return -1;
 }
 
-export const getNextScreenIndex = (screens: ScreenConfig[], currentIndex: number, isBackward: boolean, aggregatedProps?: object): number => {
+export const getNextScreenIndex = (screens: WizardScreen[], currentIndex: number, isBackward: boolean, aggregatedProps?: object): number => {
   const nextIndex = isBackward ? currentIndex - 1 : currentIndex + 1;
   if (isIndexOutOfBound(screens, nextIndex)) {
     return INVALID_SCREEN_INDEX;
@@ -44,7 +44,7 @@ export const getNextScreenIndex = (screens: ScreenConfig[], currentIndex: number
     : getNextScreenIndex(screens, nextIndex, isBackward, aggregatedProps);
 };
 
-const getNextScreen = (screens: ScreenConfig[], currentIndex: number, isBackward: boolean, componentName?: string, aggregatedProps?: object): number => {
+const getNextScreen = (screens: WizardScreen[], currentIndex: number, isBackward: boolean, componentName?: string, aggregatedProps?: object): number => {
   if (componentName) {
     const indexOfComponent = getIndexOfComponent(componentName, screens, aggregatedProps);
     if (indexOfComponent >= 0 ) {
@@ -55,7 +55,7 @@ const getNextScreen = (screens: ScreenConfig[], currentIndex: number, isBackward
   return getNextScreenIndex(screens, currentIndex, isBackward, aggregatedProps);
 }
 
-const getNextScreenByIdentifier = (screens: ScreenConfig[], componentName?: string, aggregatedProps?: object) => {
+const getNextScreenByIdentifier = (screens: WizardScreen[], componentName?: string, aggregatedProps?: object) => {
   if (componentName) {
     const indexOfComponent = getIndexOfComponent(componentName, screens, aggregatedProps);
     if (indexOfComponent >= 0 ) {
@@ -71,7 +71,7 @@ const getNextScreenByIdentifier = (screens: ScreenConfig[], componentName?: stri
  * @param {object} action - React reducer action
  * @returns {object} state
  */
- export function reducer(state: StepWizardState, action: ReducerActionType): StepWizardState {
+ export function reducer(state: WizardState, action: ReducerActionType): WizardState {
   const { screens, currentIndex, store } = state;
 
   let componentName, data = {};
@@ -101,12 +101,12 @@ const getNextScreenByIdentifier = (screens: ScreenConfig[], componentName?: stri
 }
 
 
-export const nextScreenPresent = (screens: ScreenConfig[], currentIndex: number, aggregatedProps?: object) => {
+export const nextScreenPresent = (screens: WizardScreen[], currentIndex: number, aggregatedProps?: object) => {
   const nextIndex = getNextScreenIndex(screens, currentIndex, false, aggregatedProps);
   return nextIndex !== INVALID_SCREEN_INDEX;
 };
 
-export const previousScreenPresent = (screens: ScreenConfig[], currentIndex: number, aggregatedProps?: object) => {
+export const previousScreenPresent = (screens: WizardScreen[], currentIndex: number, aggregatedProps?: object) => {
   const nextIndex = getNextScreenIndex(screens, currentIndex, true, aggregatedProps);
   return nextIndex !== INVALID_SCREEN_INDEX;
 };

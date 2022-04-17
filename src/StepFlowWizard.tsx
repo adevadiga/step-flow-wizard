@@ -1,25 +1,25 @@
 import React, { useCallback, useReducer } from 'react';
 import { nextScreenPresent, previousScreenPresent, reducer } from './stepFlowReducer';
-import StepFlowWizardScreenRenderer from './StepFlowWizardScreenRenderer';
-import { StepWizardProps, StepWizardState, ActionPayLoad } from './types';
+import WizardScreenRenderer from './WizardScreenRenderer';
+import { WizardProps, WizardState, ActionPayLoad } from './types';
 import ActionType from './utils';
 
 
-const initialState: StepWizardState = {
+const initialState: WizardState = {
   currentIndex: 0,
   screens: [],
   store: {},
 };
 
 const init = (
-  initialState: StepWizardState,
-  props: StepWizardProps,
-): StepWizardState => {
-  const { screenConfig, ...rest } = props;
-  return { ...initialState, screens: screenConfig, store: {...rest} };
+  initialState: WizardState,
+  props: WizardProps,
+): WizardState => {
+  const { screens, ...rest } = props;
+  return { ...initialState, screens, store: {...rest} };
 };
 
-const StepFlowWizard = (props: StepWizardProps) => {
+const StepFlowWizard = (props: WizardProps) => {
   const [state, dispatch] = useReducer(reducer, init(initialState, props));
 
   const handlePreviousClick = useCallback(
@@ -59,7 +59,7 @@ const StepFlowWizard = (props: StepWizardProps) => {
 
   if (activeWorkflowScreen) {
     return (
-      <StepFlowWizardScreenRenderer
+      <WizardScreenRenderer
           screen={activeWorkflowScreen}
           onPreviousClick={prevScreenAvailable ? handlePreviousClick : undefined}
           onNextClick={nextScreenAvailable ? handleNextClick : undefined}

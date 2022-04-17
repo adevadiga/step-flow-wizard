@@ -1,19 +1,19 @@
 import * as React from 'react';
 
-export type ScreenConfig  = {
+export type WizardScreen  = {
   identifier: string,
   component: React.ComponentType<any>,
   shouldRender?: (props: any) => boolean,
   shouldRenderCachedValue?: boolean,
 }
 
-export type StepWizardProps = {
-  screenConfig: ScreenConfig[]
+export type WizardProps = {
+  screens: WizardScreen[]
 }
 
-export type StepWizardState = {
+export type WizardState = {
   currentIndex: number,
-  screens: ScreenConfig[]
+  screens: WizardScreen[]
   store: any,
   error?: any
 }
@@ -27,13 +27,13 @@ export type ReducerActionType =  {
   type: string,
   isLoading?: boolean,
   error?: object,
-  screens?: ScreenConfig[],
+  screens?: WizardScreen[],
   currentIndex?: number,
   payload?: ActionPayLoad,
 }
 
-export type StepFlowWizardScreenRendererType = {
-  screen: ScreenConfig,
+export type WizardScreenRendererProps = {
+  screen: WizardScreen,
   onPreviousClick?: Function,
   onNextClick?: Function,
   onGoToScreen: Function,
