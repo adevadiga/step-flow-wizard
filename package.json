@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --open --config webpackDev.config.js",
-    "build": "export NODE_ENV=production; webpack --progress --mode=production --config webpack.config.js"
+    "build": "export NODE_ENV=production; webpack --progress --mode=production --config webpack.config.js",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.16.7",
@@ -26,11 +27,18 @@
     "@babel/plugin-transform-typescript": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.1",
+    "@storybook/addon-essentials": "^6.4.22",
+    "@storybook/addons": "^6.4.22",
+    "@storybook/react": "^6.4.22",
     "@types/react": "^18.0.5",
     "@types/react-dom": "^18.0.1",
     "babel-loader": "^8.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "css-loader": "^6.7.1",
+    "framer-motion": "^6",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
     "typescript": "^4.6.3",

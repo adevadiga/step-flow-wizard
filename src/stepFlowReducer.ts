@@ -1,4 +1,4 @@
-import { StepWizardState, ReducerActionType, ScreenConfig } from './types.ts';
+import { StepWizardState, ReducerActionType, ScreenConfig } from './types';
 import ActionType from './utils';
 
 const INVALID_SCREEN_INDEX = -1;

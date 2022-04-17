@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-type ScreenConfig  = {
+export type ScreenConfig  = {
   identifier: string,
   component: React.ComponentType<any>,
   shouldRender?: (props: any) => boolean,
