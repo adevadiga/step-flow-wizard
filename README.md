@@ -56,10 +56,26 @@ const screens = [
       return region !== 'US';
     }
   },
-  {
+   {
     identifier: 'step3',
     component: component:  component: (props) => {
       const { onPreviousClick, onNextClick } = props;
+      return (
+        <>
+          // render something
+          <button onClick={onPreviousClick}>Previous </button>
+          <button onClick={() => onNextClick({ data: {
+            name: 'X',
+            age: 30
+          }})}>Next </button>
+        </>
+      ):
+    },
+  },
+  {
+    identifier: 'step4',
+    component: component:  component: (props) => {
+      const { onPreviousClick } = props;
       return (
         <>
           // render something
