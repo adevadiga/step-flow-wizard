@@ -6,18 +6,20 @@ An intelligent multistep wizard for React
 
 
 ```
-npm install react-step-wizard
+npm install step-flow-wizard
 
-yarn add react-step-wizard
+yarn add step-flow-wizard
 ```
 
-### Import Component
+### Usage
+
+#### Import
 
 ```js
 import StepFlowWizard from "step-flow-wizard";
 ```
 
-### JSX Syntax
+#### JSX
 
 Create an array elements describing the components that make an individual step in the workflow.
 Each component will receive props which help to move forward or backward in the wizard.
@@ -74,3 +76,14 @@ const screens = [
 ```
 
 ### Props
+
+Each component in the wizard will receive the following props that help perform navigation
+
+#### Props Accessible On Each Step Component
+
+| Prop          | Data Type  | Description                                                                              |
+| ------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| onPreviousClick       | `function`   | Go to previous step in the workflow, `null` if previous step is not present |
+| onNextClick   | `function`  | Go to next step in the workflow, `null` if next step is not present |
+| onGoToScreen      | `function` | Navigate to a step using a named identifier |
+| props      | `object` | StepFlowWizard also acts as a store where you can put and get things. onPreviousClick, onNextClick and onGoToScreen takes an argument of type `{ data: {foo: 'bar'} }`, which results in adding a `foo` attribute to the Store, which can be accessed as a prop from the components.   |
