@@ -86,8 +86,8 @@ const screens = [
   },
 ];
 
-<StepFlowWizard 
-  screens={screens}/>
+
+<StepFlowWizard screens={screens}/>
 
 ```
 
