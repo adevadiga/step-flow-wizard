@@ -103,3 +103,9 @@ Each component in the wizard will receive the following props that help perform 
 | onNextClick   | `function`  | Go to next step in the workflow, `null` if next step is not present |
 | onGoToScreen      | `function` | Navigate to a step using a named identifier |
 | props      | `object` | StepFlowWizard also acts as a store where you can put and get things. onPreviousClick, onNextClick and onGoToScreen takes an argument of type `{ data: {foo: 'bar'} }`, which results in adding a `foo` attribute to the Store, which can be accessed as a prop from the components.   |
+
+
+### Next ?
+
+All the components are lazy loaded and discarded as soon as navigated to next/previous step.
+This is resulting in going back creating the component again!
