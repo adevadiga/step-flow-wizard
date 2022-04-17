@@ -19,17 +19,36 @@ import StepFlowWizard from "step-flow-wizard";
 
 ### JSX Syntax
 
-Pass a config array containing components.
+Create an array elements describing the components that make an individual step in the workflow.
+Each component will receive props which help to move forward or backward in the wizard.
+See the Props section for more detail on the props.
 
 ```jsx
 const screens = [
   {
     identifier: 'step1',
-    component: Component1,
+    component: (props) => {
+      const { onNextClick } = props;
+      return (
+        <>
+          // render something
+          <button onClick={onNextClick}>Next </button>
+        </>
+      ):
+    },
   },
   {
     identifier: 'step2',
-    component: Component2,
+    component:  component: (props) => {
+      const { onPreviousClick, onNextClick } = props;
+      return (
+        <>
+          // render something
+          <button onClick={onPreviousClick}>Previous </button>
+          <button onClick={onNextClick}>Next </button>
+        </>
+      ):
+    },
     shouldRender: ({ region }) => {
       // Show this step only for US region
       return region !== 'US';
@@ -37,7 +56,15 @@ const screens = [
   },
   {
     identifier: 'step3',
-    component: Component3,
+    component: component:  component: (props) => {
+      const { onPreviousClick, onNextClick } = props;
+      return (
+        <>
+          // render something
+          <button onClick={onPreviousClick}>Previous</button>
+        </>
+      ):
+    },
   },
 ];
 
