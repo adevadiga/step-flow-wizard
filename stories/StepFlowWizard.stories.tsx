@@ -247,7 +247,7 @@ export const SampleWorkflow: ComponentStory<typeof StepFlowWizard> = () => {
   );
 };
 
-// Example of conditional rendering of Step.
+// Example of conditional rendering of Step using function handler
 export const WorkflowConditionalRenderingOfStep: ComponentStory<typeof StepFlowWizard> = () => {
   const screens = [
     {
