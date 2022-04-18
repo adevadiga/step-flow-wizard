@@ -14,3 +14,4 @@ CHANGELOG.md
 rollup.config.js
 webpack.config.js
 step-flow-wizard-*.tgz
+yarn*.log
