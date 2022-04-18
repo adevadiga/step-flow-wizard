@@ -11,7 +11,9 @@ public/
 stories/
 CHANGELOG.md
 .github/
+.storybook
 rollup.config.js
 webpack.config.js
+webpackDev.config.js
 step-flow-wizard-*.tgz
 yarn*.log
