@@ -1,0 +1,16 @@
+# Publish dist to npm but not to repo
+!dist/
+
+.babelrc
+.cache/
+.eslintrc
+.gitignore
+.nvmrc
+.vscode/
+public/
+stories/
+CHANGELOG.md
+.github/
+rollup.config.js
+webpack.config.js
+step-flow-wizard-*.tgz
