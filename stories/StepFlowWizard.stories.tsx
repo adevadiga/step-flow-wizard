@@ -247,7 +247,7 @@ export const SampleWorkflow: ComponentStory<typeof StepFlowWizard> = () => {
   );
 };
 
-export const ConditionalRenderingOfAStep: ComponentStory<typeof StepFlowWizard> = () => {
+export const WorkflowConditionalRenderingOfStep: ComponentStory<typeof StepFlowWizard> = () => {
   const screens = [
     {
       identifier: 'step1',
