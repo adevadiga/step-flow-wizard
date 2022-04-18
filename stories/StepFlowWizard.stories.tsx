@@ -247,7 +247,7 @@ export const SampleWorkflow: ComponentStory<typeof StepFlowWizard> = () => {
   );
 };
 
-// Example of how to control rendering of Step using shouldRender
+// Example of how to control rendering of Step using shouldRender function.
 export const WorkflowConditionalRenderingOfStep: ComponentStory<typeof StepFlowWizard> = () => {
   const screens = [
     {
