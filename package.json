@@ -1,6 +1,7 @@
 {
   "name": "step-flow-wizard",
   "version": "1.0.0",
+  "description": "An intelligent step workflow wizard for React",
   "main": "dist/step-flow-wizard.min.js",
   "author": "Anoop Devadiga <anoopkundapur@gmail.com>",
   "license": "MIT",
@@ -10,6 +11,21 @@
     "storybook": "start-storybook -p 6006",
     "prepublish": "rm -rf ./dist && yarn run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adevadiga/step-flow-wizard"
+  },
+  "homepage": "https://github.com/adevadiga/step-flow-wizard#readme",
+  "bugs": {
+    "url": "https://github.com/adevadiga/step-flow-wizard/issues"
+  },
+  "keywords": [
+    "react",
+    "step",
+    "multistep",
+    "wizard",
+    "workflow"
+  ],
   "peerDependencies": {
     "react": ">=16"
   },
