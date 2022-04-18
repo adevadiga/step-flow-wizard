@@ -2,7 +2,7 @@
 
 An intelligent multistep wizard for React
 
-### Install
+### Installation
 
 
 ```
@@ -11,7 +11,7 @@ npm install step-flow-wizard
 yarn add step-flow-wizard
 ```
 
-### Usage
+### Quick Start
 
 #### Import
 
@@ -122,7 +122,11 @@ Each component in the wizard will receive the following props that help perform 
 | props      | `object` | StepFlowWizard also acts as a store where you can put and get things. onPreviousClick, onNextClick and onGoToScreen takes an argument of type `{ data: {foo: 'bar'} }`, which results in adding a `foo` attribute to the Store, which can be accessed as a prop from the components.   |
 
 
+### Author(s)
+  Anoop Devadiga (anoopkundapur@gmail.com)
+
 ### Next ?
 
 All the components are lazy loaded and discarded as soon as navigated to next/previous step.
-This is resulting in going back creating the component again!
+This can result in component re-creation.
+

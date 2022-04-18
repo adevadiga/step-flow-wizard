@@ -2,13 +2,13 @@
   "name": "step-flow-wizard",
   "version": "1.0.0",
   "main": "dist/step-flow-wizard.min.js",
-  "typings": "dist/index.d.ts",
   "author": "Anoop Devadiga <anoopkundapur@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --open --config webpackDev.config.js",
     "build": "export NODE_ENV=production; webpack --progress --mode=production --config webpack.config.js",
-    "storybook": "start-storybook -p 6006"
+    "storybook": "start-storybook -p 6006",
+    "prepublish": "rm -rf ./dist && yarn run build"
   },
   "peerDependencies": {
     "react": ">=16"
