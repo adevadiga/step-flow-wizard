@@ -1,0 +1,10 @@
+
+h2 {
+  color: rgb(13, 88, 123);
+  font: bold calc(1em + 2 * (50vw - 70px) / 100) 'Dancing Script', cursive,
+  fantasy;
+}
+
+h3 {
+  color: rgb(13, 88, 123);
+}

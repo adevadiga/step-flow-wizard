@@ -1,4 +1,4 @@
-//import "../src/styles/theme.css";
+import "../stories/theme.css";
 import { addDecorator } from "@storybook/react";
 
 addDecorator(story => <div className="wizard-container">{story()}</div>);;
