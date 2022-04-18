@@ -212,7 +212,7 @@ const LastStep = ({onPreviousClick, onGoToScreen}) => {
   );
 }
 
-export const Primary: ComponentStory<typeof StepFlowWizard> = () => {
+export const MultiStepWorkflow: ComponentStory<typeof StepFlowWizard> = () => {
   const screens = [
     {
       identifier: 'step1',
