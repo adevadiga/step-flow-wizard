@@ -18,3 +18,5 @@ webpackDev.config.js
 step-flow-wizard-*.tgz
 yarn*.log
 storybook-static
+docs-build
+.github

@@ -10,10 +10,8 @@ const WizardScreenRenderer: FunctionComponent<WizardScreenRendererProps> = (prop
     stepFlowWizardStore,
     ...rest
   } = props;
-  const Container = component;
-  return <div>
-    <Container {...props} key={identifier}  {...stepFlowWizardStore} {...rest}/>
-  </div>
+  
+  return React.createElement(component, {key: identifier, ...props, ...stepFlowWizardStore,  ...rest});
 }
 
 export default WizardScreenRenderer;
