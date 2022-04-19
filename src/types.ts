@@ -23,6 +23,7 @@ export type WizardState = {
 
 export type ActionPayLoad = {
   componentName?: string,
+  componentId?: string,
   data?: object,
 }
 

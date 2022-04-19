@@ -10,6 +10,8 @@ An intelligent multistep wizard for React
 
 [Try it out](https://codesandbox.io/s/step-flow-wizard-fnr71e?file=/src/App.js)
 
+![Example](https://raw.githubusercontent.com/adevadiga/step-flow-wizard/main/step-flow-wizard_demo.gif)
+
 ### Installation
 
 
@@ -137,8 +139,8 @@ Each component in the wizard will receive the following props that help perform 
 ### Author(s)
   Anoop Devadiga (anoopkundapur@gmail.com)
 
-### Next ?
+### Next?
 
-All the components are lazy loaded and discarded as soon as navigated to next/previous step.
+All the components are lazy loaded and discarded as soon as your navigate to next/previous step.
 This can result in component re-creation.
 

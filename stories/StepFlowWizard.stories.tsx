@@ -178,7 +178,7 @@ const Step5 = ({onPreviousClick, onGoToScreen}) => {
           <Button variant="contained" onClick={onPreviousClick}>Previous</Button>
           <Button variant="contained" onClick={() => onGoToScreen(
             {
-              componentName: "step2"
+              componentId: "step2"
             })}>Go to step-2
           </Button>
         </Stack>
@@ -203,7 +203,7 @@ const LastStep = ({onPreviousClick, onGoToScreen}) => {
           <Button variant="contained" onClick={onPreviousClick}>Previous</Button>
           <Button variant="contained" onClick={() => onGoToScreen(
             {
-              componentName: "step1"
+              componentId: "step1"
             })}>Go to step-1
           </Button>
         </Stack>
