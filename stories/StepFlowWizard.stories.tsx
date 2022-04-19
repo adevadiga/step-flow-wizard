@@ -285,7 +285,7 @@ export const ScreenConfigWithParams: ComponentStory<typeof StepFlowWizard> = () 
       identifier: 'step1',
       component: Step1,
       params: {
-        product: 'iPhone'
+        product: 'iPhone' //available as a prop in the component
       }
     },
     {
