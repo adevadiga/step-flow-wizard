@@ -46,6 +46,10 @@ const screens = [
         </>
       ):
     },
+    // Any additional params you want to configure in the config file.
+    params: {
+      product: 'xxx',
+    }
   },
   {
     identifier: 'step2',
