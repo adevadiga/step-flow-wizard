@@ -10,7 +10,7 @@ An intelligent multistep wizard for React
 
 [Try it out](https://codesandbox.io/s/step-flow-wizard-fnr71e?file=/src/App.js)
 
-![Example](https://raw.githubusercontent.com/adevadiga/step-flow-wizard/main/step-flow-wizard_demo.gif)
+![Example](https://raw.githubusercontent.com/adevadiga/step-flow-wizard/main/example.gif)
 
 ### Installation
 
