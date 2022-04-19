@@ -5,6 +5,9 @@ export type WizardScreen  = {
   component: React.ComponentType<any>,
   shouldRender?: (props: any) => boolean,
   shouldRenderCachedValue?: boolean,
+  params?: {
+    [key: string]: any
+  },
 }
 
 export type WizardProps = {

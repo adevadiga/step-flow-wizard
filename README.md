@@ -2,6 +2,8 @@
 
 An intelligent multistep wizard for React
 
+[![npm version](https://badge.fury.io/js/step-flow-wizard.svg)](https://badge.fury.io/js/step-flow-wizard)
+
 ### Demo
 
 [Storybook](http://adevadiga.github.io/step-flow-wizard)

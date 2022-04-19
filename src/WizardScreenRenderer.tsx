@@ -6,12 +6,13 @@ const WizardScreenRenderer: FunctionComponent<WizardScreenRendererProps> = (prop
     screen: {
       identifier,
       component,
+      params
     },
     stepFlowWizardStore,
     ...rest
   } = props;
   
-  return React.createElement(component, {key: identifier, ...props, ...stepFlowWizardStore,  ...rest});
+  return React.createElement(component, {key: identifier, ...props, ...stepFlowWizardStore,  ...rest, ...params});
 }
 
 export default WizardScreenRenderer;
