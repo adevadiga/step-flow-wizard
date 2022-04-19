@@ -273,8 +273,41 @@ export const WorkflowConditionalRenderingOfStep: ComponentStory<typeof StepFlowW
         screens={screens}
       />  
     </>
-     
   );
 };
 
+
+// Example of pass attribute from config
+export const ScreenConfigWithParams: ComponentStory<typeof StepFlowWizard> = () => {
+
+  const screens = [
+    {
+      identifier: 'step1',
+      component: Step1,
+      params: {
+        product: 'iPhone'
+      }
+    },
+    {
+      identifier: 'step2',
+      component: Step2,
+      params: {
+        variation: 'x'
+      }
+    },
+    {
+      identifier: 'step5',
+      component: LastStep
+    }
+  ];
+
+  return (
+    <>
+     <h2>Step Flow Wizard</h2>
+     <StepFlowWizard
+        screens={screens}
+      />  
+    </>
+  );
+}
 

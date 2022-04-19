@@ -20,3 +20,4 @@ yarn*.log
 storybook-static
 docs-build
 .github
+step-flow-wizard_demo.gif
