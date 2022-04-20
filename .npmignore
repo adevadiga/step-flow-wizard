@@ -22,3 +22,6 @@ docs-build
 .github
 example.gif
 docs
+coverage
+jest.config.ts 
+test
