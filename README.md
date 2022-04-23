@@ -3,56 +3,6 @@
 An intelligent multistep wizard for React
 
 
-## Highlights
-
-- Each individual component in the workflow will receive following props to manage the navigation in the wizard
-   - `onPreviousClick` - go to the previous step
-   - `onNextClick` - go to the next step
-   - `onGoToScreen` - go to a step using the step identifier
-
-- Wizard also manages a Store where you can PUT things from any Step and GET things from any other Step.
-    - Wizard Store gets exposed as Props to individual component
-    - The navigation functions support adding things to the wizard Store
-      ```
-        onNextClick({ data: {
-          name: 'Mr X',
-          age: 42,
-          address: {}
-        }})
-
-      ```
-- Dynamic control of skipping Step based on the config.
-
-    ```
-        const steps = [
-          {
-            identifier: 'step1',
-            component: View1,
-            shouldRender: (props) {
-              const { region } = props;
-              //Skip this step for non US regions
-              return region === 'US';
-            }
-          }
-          ...
-        ]
-    ```
-- Configure additional parameter in the Step definition, which are passed as props to component
-
-  ```
-        const steps = [
-          {
-            identifier: 'step1',
-            component: View1,
-            params: {
-              // product will be available as props
-              product: 'Iphone'
-            }
-          }
-          ...
-        ]
-    ```
-
 [![npm version](https://badge.fury.io/js/step-flow-wizard.svg)](https://badge.fury.io/js/step-flow-wizard)
 
 ### Demo
@@ -71,7 +21,6 @@ npm install step-flow-wizard
 
 yarn add step-flow-wizard
 ```
-
 ### Quick Start
 
 #### Import
@@ -172,6 +121,56 @@ const screens = [
 <StepFlowWizard screens={screens} region="CA"/>
 
 ```
+
+### Highlights
+
+- Each individual component in the workflow will receive following props to manage the navigation in the wizard
+   - `onPreviousClick` - go to the previous step
+   - `onNextClick` - go to the next step
+   - `onGoToScreen` - go to a step using the step identifier
+
+- Wizard also manages a Store where you can PUT things from any Step and GET things from any other Step.
+    - Wizard Store gets exposed as Props to individual component
+    - The navigation functions support adding things to the wizard Store
+      ```
+        onNextClick({ data: {
+          name: 'Mr X',
+          age: 42,
+          address: {}
+        }})
+
+      ```
+- Dynamic control of skipping Step based on the config.
+
+    ```
+        const steps = [
+          {
+            identifier: 'step1',
+            component: View1,
+            shouldRender: (props) {
+              const { region } = props;
+              //Skip this step for non US regions
+              return region === 'US';
+            }
+          }
+          ...
+        ]
+    ```
+- Configure additional parameter in the Step definition, which are passed as props to component
+
+  ```
+        const steps = [
+          {
+            identifier: 'step1',
+            component: View1,
+            params: {
+              // product will be available as props
+              product: 'Iphone'
+            }
+          }
+          ...
+        ]
+    ```
 
 ### Props
 
