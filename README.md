@@ -55,7 +55,7 @@ const screens = [
   },
   {
     identifier: 'step2',
-    component:  component: (props) => {
+    component: (props) => {
       const { onPreviousClick, onNextClick } = props;
       return (
         <>
@@ -88,7 +88,7 @@ const screens = [
   },
   {
     identifier: 'step4',
-    component:  component: (props) => {
+    component: (props) => {
       const { onPreviousClick, onNextClick } = props;
       return (
         <>
@@ -105,7 +105,7 @@ const screens = [
   },
   {
     identifier: 'step5',
-    component: component:  component: (props) => {
+    component: (props) => {
       const { onPreviousClick } = props;
       return (
         <>
@@ -191,6 +191,5 @@ Each component in the wizard will receive the following props that help perform 
 
 ### Next?
 
-All the components are lazy loaded and discarded as soon as your navigate to next/previous step.
-This can result in component re-creation.
+   
 
