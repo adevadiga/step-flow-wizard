@@ -72,7 +72,7 @@ const screens = [
   },
    {
     identifier: 'step3',
-    component: component:  component: (props) => {
+    component: (props) => {
       const { onPreviousClick, onNextClick } = props;
       return (
         <>
