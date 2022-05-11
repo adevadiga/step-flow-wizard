@@ -24,9 +24,11 @@
   },
   "keywords": [
     "react",
-    "step",
+    "react-step-wizard",
+    "react-multistep-wizard",
     "multistep",
     "wizard",
+    "react-wizard",
     "workflow"
   ],
   "peerDependencies": {
