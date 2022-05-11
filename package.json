@@ -1,6 +1,6 @@
 {
   "name": "step-flow-wizard",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "An intelligent step workflow wizard for React",
   "main": "dist/step-flow-wizard.min.js",
   "author": "Anoop Devadiga <anoopkundapur@gmail.com>",
