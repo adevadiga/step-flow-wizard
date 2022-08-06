@@ -1,9 +1,9 @@
-# step-flow-wizard
+# react-step-flow-wizard
 
 An intelligent multistep wizard for React
 
 
-[![npm version](https://badge.fury.io/js/step-flow-wizard.svg)](https://badge.fury.io/js/step-flow-wizard)
+[![npm version](https://badge.fury.io/js/react-step-flow-wizard.svg)](https://badge.fury.io/js/react-step-flow-wizard)
 
 ### Demo
 
@@ -17,16 +17,16 @@ An intelligent multistep wizard for React
 
 
 ```
-npm install step-flow-wizard
+npm install react-step-flow-wizard
 
-yarn add step-flow-wizard
+yarn add react-step-flow-wizard
 ```
 ### Quick Start
 
 #### Import
 
 ```js
-import StepFlowWizard from "step-flow-wizard";
+import StepFlowWizard from "react-step-flow-wizard";
 ```
 
 #### JSX
