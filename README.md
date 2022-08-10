@@ -9,7 +9,7 @@ An intelligent multistep wizard for React
 
 [Storybook](http://adevadiga.github.io/step-flow-wizard)
 
-[Try it out](https://codesandbox.io/s/step-flow-wizard-fnr71e?file=/src/App.js)
+[Try it out](https://codesandbox.io/s/react-step-flow-wizard-we7twq)
 
 ![Example](https://raw.githubusercontent.com/adevadiga/step-flow-wizard/main/example.gif)
 
